@@ -1,0 +1,41 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://scripts/tileset.gd" type="Script" id=1]
+[ext_resource path="res://images/floor-bricks.png" type="Texture" id=2]
+
+[node name="floor-bricks" type="Node" index="0"]
+
+script = ExtResource( 1 )
+reset = false
+tilesheet = "res://images/floor-bricks.png"
+tilesize = 64
+
+[node name="0" type="Sprite" parent="." index="0"]
+
+position = Vector2( 32, 32 )
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 64, 64 )
+
+[node name="1" type="Sprite" parent="." index="1"]
+
+position = Vector2( 96, 32 )
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 64, 0, 64, 64 )
+
+[node name="2" type="Sprite" parent="." index="2"]
+
+position = Vector2( 32, 96 )
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 0, 64, 64, 64 )
+
+[node name="3" type="Sprite" parent="." index="3"]
+
+position = Vector2( 96, 96 )
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 64, 64, 64, 64 )
+
+
