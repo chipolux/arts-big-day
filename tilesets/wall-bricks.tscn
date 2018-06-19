@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://scripts/tileset.gd" type="Script" id=1]
 [ext_resource path="res://images/wall-bricks.png" type="Texture" id=2]
@@ -17,6 +17,16 @@ extents = Vector2( 6, 32 )
 
 custom_solver_bias = 0.0
 extents = Vector2( 32, 4 )
+
+[sub_resource type="RectangleShape2D" id=5]
+
+custom_solver_bias = 0.0
+extents = Vector2( 32, 8 )
+
+[sub_resource type="RectangleShape2D" id=4]
+
+custom_solver_bias = 0.0
+extents = Vector2( 6, 4 )
 
 [node name="wall-bricks" type="Node" index="0"]
 
@@ -104,6 +114,7 @@ region_rect = Rect2( 192, 0, 64, 64 )
 
 [node name="static_body_2d4" type="StaticBody2D" parent="3" index="0"]
 
+editor/display_folded = true
 input_pickable = false
 collision_layer = 1
 collision_mask = 1
@@ -224,6 +235,7 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="11" type="Sprite" parent="." index="11"]
 
+editor/display_folded = true
 position = Vector2( 224, 160 )
 texture = ExtResource( 2 )
 region_enabled = true
@@ -248,6 +260,7 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="12" type="Sprite" parent="." index="12"]
 
+editor/display_folded = true
 position = Vector2( 32, 224 )
 texture = ExtResource( 2 )
 region_enabled = true
@@ -278,6 +291,7 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="13" type="Sprite" parent="." index="13"]
 
+editor/display_folded = true
 position = Vector2( 96, 224 )
 texture = ExtResource( 2 )
 region_enabled = true
@@ -308,6 +322,7 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="14" type="Sprite" parent="." index="14"]
 
+editor/display_folded = true
 position = Vector2( 160, 224 )
 texture = ExtResource( 2 )
 region_enabled = true
@@ -328,6 +343,88 @@ _sections_unfolded = [ "Transform" ]
 
 position = Vector2( 26, 0 )
 shape = SubResource( 2 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="15" type="Sprite" parent="." index="15"]
+
+editor/display_folded = true
+position = Vector2( 288, 32 )
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 256, 0, 64, 64 )
+
+[node name="static_body_2d5" type="StaticBody2D" parent="15" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+_sections_unfolded = [ "Transform" ]
+
+[node name="collision_shape_2d" type="CollisionShape2D" parent="15/static_body_2d5" index="0"]
+
+position = Vector2( 0, -12 )
+shape = SubResource( 5 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="16" type="Sprite" parent="." index="16"]
+
+position = Vector2( 288, 96 )
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 256, 64, 64, 64 )
+
+[node name="17" type="Sprite" parent="." index="17"]
+
+editor/display_folded = true
+position = Vector2( 224, 224 )
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 192, 192, 64, 64 )
+
+[node name="static_body_2d2" type="StaticBody2D" parent="17" index="0"]
+
+editor/display_folded = true
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+_sections_unfolded = [ "Transform" ]
+
+[node name="collision_shape_2d" type="CollisionShape2D" parent="17/static_body_2d2" index="0"]
+
+position = Vector2( 26, 28 )
+shape = SubResource( 4 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="18" type="Sprite" parent="." index="18"]
+
+editor/display_folded = true
+position = Vector2( 288, 224 )
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 256, 192, 64, 64 )
+
+[node name="static_body_2d" type="StaticBody2D" parent="18" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="collision_shape_2d" type="CollisionShape2D" parent="18/static_body_2d" index="0"]
+
+position = Vector2( -26, 28 )
+shape = SubResource( 4 )
 _sections_unfolded = [ "Transform" ]
 
 
